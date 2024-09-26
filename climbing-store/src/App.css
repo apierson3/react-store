@@ -1,3 +1,15 @@
+body {
+  height: 125vh;
+  background-image: url('./images/ClimbingWebsiteBackground.png');
+  background-size: 50%;
+  font-family: sans-serif;
+  margin-top: 80px;
+  padding: 30px;
+  background-repeat: no-repeat; /* Prevent the image from repeating */
+  background-position: center; /* Center the image */
+  background-color: #fbe6b1;
+}
+
 .App {
   text-align: center;
 }
