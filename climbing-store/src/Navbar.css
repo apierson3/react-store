@@ -25,18 +25,23 @@
   .navbar-logo {
     color: #000000;
     font-size: 1.5rem;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    display: inline;
   }
   
   .navbar-links-container {
     display: flex;
-    justify-content: center; /* Center the links */
+     /* Center the links */
     flex-grow: 1; /* Allow the container to grow */
     display: inline;
+    align-items: center;
+    justify-content: center;
 }
   .navbar-links {
     list-style: none;
     gap: 1rem;
-
   }
   
   .navbar-links a {

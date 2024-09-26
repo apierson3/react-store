@@ -7,7 +7,6 @@ import Carabiner from './images/Carabiner.png';
 function Navbar() {
   return (
     <div className="navbar-container">
-    <nav className="navbar">
       <img className="navbar-img" src={Carabiner} alt="Carabiner" />
       <h1 className="navbar-logo">MyApp</h1>
       <div className="navbar-links-container">
@@ -18,7 +17,6 @@ function Navbar() {
         <li><Link to="/contact">Contact</Link></li>
       </ul>
       </div>
-    </nav>
     </div>
   );
 }
