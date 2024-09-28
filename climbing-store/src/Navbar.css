@@ -7,7 +7,7 @@
   .navbar-img {
     height: 80px;
     margin-left: 20px;
-    margin-top: 10px;
+    align-items: center;
   }
 
   .navbar-container {
@@ -29,19 +29,21 @@
     justify-content: center;
     display: flex;
     display: inline;
+    margin-left: 20px;
   }
   
   .navbar-links-container {
     display: flex;
      /* Center the links */
     flex-grow: 1; /* Allow the container to grow */
-    display: inline;
     align-items: center;
     justify-content: center;
 }
   .navbar-links {
     list-style: none;
     gap: 1rem;
+    display: inline;
+    display: flex;
   }
   
   .navbar-links a {
