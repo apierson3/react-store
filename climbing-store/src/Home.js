@@ -1,8 +1,14 @@
 // src/Home.js
 import React from 'react';
+import './App.css';
+import Hero from './Hero';
 
 function Home() {
-  return <h2>Home Page</h2>;
+  return (      
+      <div>
+        <Hero />
+      </div>
+  );
 }
 
 export default Home;
