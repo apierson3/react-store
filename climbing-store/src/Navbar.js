@@ -8,7 +8,7 @@ function Navbar() {
   return (
     <div className="navbar-container">
       <img className="navbar-img" src={Carabiner} alt="Carabiner" />
-      <h1 className="navbar-logo">MyApp</h1>
+      <h1 className="navbar-logo">iClimb</h1>
       <div className="navbar-links-container">
       <ul className="navbar-links">
         <li><Link to="/">Home</Link></li>
