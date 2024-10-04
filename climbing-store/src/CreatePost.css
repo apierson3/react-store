@@ -1,0 +1,59 @@
+/* CreatePost.css */
+.createPostPage {
+    font-family: 'Roboto', sans-serif;
+    padding: 20px;
+    margin: 20px;
+    color: white;
+}
+
+.cpContainer {
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    backdrop-filter: blur(10px); /* Apply blur effect */
+    border-radius: 20px; /* Rounded corners */
+    padding: 20px; /* Add some padding */
+}
+
+.cpContainer h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.inputContainer {
+    background-color: rgba(255, 255, 255, 0.1); /* Light semi-transparent background */
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.inputGp {
+    margin-bottom: 20px;
+}
+
+.inputGp label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.inputGp input,
+.inputGp textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
