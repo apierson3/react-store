@@ -1,4 +1,4 @@
-// src/Contact.js
+// src/Login.js
 import React from 'react';
 import { auth, provider } from './firebase-config'
 import { signInWithPopup } from 'firebase/auth';

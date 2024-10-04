@@ -8,8 +8,8 @@ import { signOut } from 'firebase/auth';
 import { useNavigate } from 'react-router-dom';
 import { auth } from './firebase-config';
 
-function Navbar() {
-  const [isAuth, setIsAuth] = useState(localStorage.getItem('isAuth'));
+function Navbar({ isAuth, setIsAuth }) {
+  // const [isAuth, setIsAuth] = useState(localStorage.getItem('isAuth'));
   
 
   const signUserOut = () => {
@@ -17,7 +17,7 @@ function Navbar() {
       localStorage.clear();
       setIsAuth(false);
       window.location.pathname = '/login';
-    })
+    });
   };
 
   return (

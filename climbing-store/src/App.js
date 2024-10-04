@@ -15,7 +15,7 @@ function App() {
 
   return (
     <Router>
-      <Navbar />
+      <Navbar isAuth={isAuth} setIsAuth={setIsAuth}/>
       <Routes>
         <Route path="/" element={<Home isAuth={isAuth} />} />
         <Route path="/about" element={<About isAuth={isAuth} />} />
