@@ -9,6 +9,7 @@ import Contact from './Contact';
 import Login from './Login';
 import './App.css';
 import CreatePost from './CreatePost';
+import Posts from './Posts'
 
 function App() {
   const [isAuth, setIsAuth] = useState(localStorage.getItem("isAuth"));
@@ -22,6 +23,7 @@ function App() {
         <Route path="/products" element={<Products isAuth={isAuth} />} />
         <Route path="/contact" element={<Contact isAuth={isAuth} />} />
         <Route path="/createpost" element={<CreatePost isAuth={isAuth} />} />
+        <Route path="/posts" element={<Posts isAuth={isAuth} />} />
         <Route path="/login" element={<Login setIsAuth={setIsAuth}/>}/>
       </Routes>
     </Router>
