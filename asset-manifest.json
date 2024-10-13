@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/climbing-store/static/css/main.6ae393c8.css",
-    "main.js": "/climbing-store/static/js/main.daf03c94.js",
-    "static/js/453.0c4b6742.chunk.js": "/climbing-store/static/js/453.0c4b6742.chunk.js",
-    "static/media/Background.jpg": "/climbing-store/static/media/Background.e7f72a477bca63f34daf.jpg",
-    "static/media/samplevid.mp4": "/climbing-store/static/media/samplevid.e632c9ec0363489e5c68.mp4",
-    "static/media/Carabiner.png": "/climbing-store/static/media/Carabiner.7aade83236ebeeb406de.png",
-    "index.html": "/climbing-store/index.html",
-    "main.6ae393c8.css.map": "/climbing-store/static/css/main.6ae393c8.css.map",
-    "main.daf03c94.js.map": "/climbing-store/static/js/main.daf03c94.js.map",
-    "453.0c4b6742.chunk.js.map": "/climbing-store/static/js/453.0c4b6742.chunk.js.map"
+    "main.css": "/react-store/static/css/main.13851e8e.css",
+    "main.js": "/react-store/static/js/main.63a5fb01.js",
+    "static/js/453.0c4b6742.chunk.js": "/react-store/static/js/453.0c4b6742.chunk.js",
+    "static/media/Background.jpg": "/react-store/static/media/Background.e7f72a477bca63f34daf.jpg",
+    "static/media/samplevid.mp4": "/react-store/static/media/samplevid.e632c9ec0363489e5c68.mp4",
+    "static/media/Carabiner.png": "/react-store/static/media/Carabiner.7aade83236ebeeb406de.png",
+    "index.html": "/react-store/index.html",
+    "main.13851e8e.css.map": "/react-store/static/css/main.13851e8e.css.map",
+    "main.63a5fb01.js.map": "/react-store/static/js/main.63a5fb01.js.map",
+    "453.0c4b6742.chunk.js.map": "/react-store/static/js/453.0c4b6742.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.6ae393c8.css",
-    "static/js/main.daf03c94.js"
+    "static/css/main.13851e8e.css",
+    "static/js/main.63a5fb01.js"
   ]
 }
