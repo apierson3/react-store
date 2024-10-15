@@ -8,7 +8,7 @@ import { getAuth, GoogleAuthProvider} from 'firebase/auth'
 // Your web app's Firebase configuration
 const firebaseConfig = {
   apiKey: "AIzaSyBIk1u_wcAXSXQYcieUFhqmzUCFjm5yNDQ",
-  authDomain: "https://apierson3.github.io",  //blog-6f985.firebaseapp.com
+  authDomain: "apierson3.github.io",  //blog-6f985.firebaseapp.com
   projectId: "blog-6f985",
   storageBucket: "blog-6f985.appspot.com",
   messagingSenderId: "412536071641",
