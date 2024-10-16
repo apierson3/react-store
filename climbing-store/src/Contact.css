@@ -1,0 +1,41 @@
+.contact-container {
+    font-family: 'Roboto', sans-serif;
+    padding: 20px;
+    margin: 20px;
+    color: white;
+}
+
+.contact-blur {
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    backdrop-filter: blur(10px); /* Apply blur effect */
+    border-radius: 20px; /* Rounded corners */
+    padding: 20px; /* Add some padding */
+}
+
+.contact-container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.contact-container h2 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.contact-container p {
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+.contact-container ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.contact-container ul li {
+    margin-bottom: 10px;
+}
+
+.contact-container ul li strong {
+    font-weight: bold;
+}
