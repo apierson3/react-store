@@ -1,6 +1,5 @@
-// src/App.js
 import React, { useState } from "react";
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { HashRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from './Navbar';
 import Home from './Home';
 import About from './About';
@@ -9,7 +8,7 @@ import Contact from './Contact';
 import Login from './Login';
 import './App.css';
 import CreatePost from './CreatePost';
-import Posts from './Posts'
+import Posts from './Posts';
 
 function App() {
   const [isAuth, setIsAuth] = useState(localStorage.getItem("isAuth"));
@@ -29,6 +28,5 @@ function App() {
     </Router>
   );
 }
-
 
 export default App;
