@@ -9,6 +9,8 @@ import Login from './Login';
 import './App.css';
 import CreatePost from './CreatePost';
 import Posts from './Posts';
+import BlogPost from "./BlogPost";
+import './Posts.css'
 
 function App() {
   const [isAuth, setIsAuth] = useState(localStorage.getItem("isAuth"));
@@ -24,6 +26,7 @@ function App() {
         <Route path="/createpost" element={<CreatePost isAuth={isAuth} />} />
         <Route path="/posts" element={<Posts isAuth={isAuth} />} />
         <Route path="/login" element={<Login setIsAuth={setIsAuth}/>}/>
+        <Route path="/post/:postId" element={<BlogPost />} />
       </Routes>
     </Router>
   );
