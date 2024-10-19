@@ -27,6 +27,7 @@ function App() {
         <Route path="/posts" element={<Posts isAuth={isAuth} />} />
         <Route path="/login" element={<Login setIsAuth={setIsAuth}/>}/>
         <Route path="/post/:postId" element={<BlogPost />} />
+        <Route path="*" element={<Home />} /> {/* Catch-all route */}
       </Routes>
     </Router>
   );
