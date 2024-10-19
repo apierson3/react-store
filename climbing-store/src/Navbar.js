@@ -1,4 +1,3 @@
-// Navbar.js
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -18,6 +17,8 @@ function Navbar({ isAuth, setIsAuth }) {
     });
   };
 
+  const isAdmin = localStorage.getItem("isAdmin") === "true";
+
   return (
     <div className="navbar-container">
       <img className="navbar-img" src={Carabiner} alt="Carabiner" />
@@ -29,27 +30,26 @@ function Navbar({ isAuth, setIsAuth }) {
           <li><Link to="/products">Products</Link></li>
           <li><Link to="/contact">Contact</Link></li>
         </ul>
-            <div className='navbar-account'>
-            {!isAuth ? (
-              <Link to="/login">Login</Link>
-            ) : (
-              <div className="dropdown">
-                <button className="dropbtn">
-                  Account  <FontAwesomeIcon icon={faChevronDown} />
+        <div className='navbar-account'>
+          {!isAuth ? (
+            <Link to="/login">Login</Link>
+          ) : (
+            <div className="dropdown">
+              <button className="dropbtn">
+                Account  <FontAwesomeIcon icon={faChevronDown} />
+              </button>
+              <div className="dropdown-content">
+                {isAdmin && <Link to="/createpost">Create a Post</Link>}
+                <Link to="/profile">
+                  <FontAwesomeIcon icon={faUser} /> Profile
+                </Link>
+                <button onClick={signUserOut} className="logout-button">
+                  <FontAwesomeIcon icon={faSignOutAlt} /> Log Out
                 </button>
-                <div className="dropdown-content">
-                  <Link to="/createpost">Create a Post</Link>
-                  <Link to="/profile">
-                    <FontAwesomeIcon icon={faUser} /> Profile
-                  </Link>
-                  <button onClick={signUserOut} className="logout-button">
-                    <FontAwesomeIcon icon={faSignOutAlt} /> Log Out
-                  </button>
-                </div>
               </div>
-              
-            )}
             </div>
+          )}
+        </div>
       </div>
     </div>
   );
