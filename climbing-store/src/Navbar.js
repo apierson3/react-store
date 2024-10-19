@@ -9,11 +9,15 @@ import { useNavigate } from 'react-router-dom';
 import { auth } from './firebase-config';
 
 function Navbar({ isAuth, setIsAuth }) {
+  const navigate = useNavigate();
+
   const signUserOut = () => {
     signOut(auth).then(() => {
       localStorage.clear();
       setIsAuth(false);
-      window.location.pathname = '/login';
+      navigate('/'); // Navigate to the homepage after signing out
+    }).catch((error) => {
+      console.error('Error signing out: ', error);
     });
   };
 
