@@ -13,6 +13,7 @@ import BlogPost from "./BlogPost";
 import './Posts.css'
 import ManagePosts from "./ManagePosts";
 import EditPost from "./EditPost";
+import CreateProduct from "./CreateProduct";
  
 function App() {
   const [isAuth, setIsAuth] = useState(localStorage.getItem("isAuth"));
@@ -30,8 +31,9 @@ function App() {
         <Route path="/login" element={<Login setIsAuth={setIsAuth}/>}/>
         <Route path="/post/:postId" element={<BlogPost />} />
         <Route path="*" element={<Home />} /> {/* Catch-all route */}
-        <Route path="/editpost/:postId" element={<EditPost />} />
+        <Route path="/editpost/:postId" element={<EditPost  />} />
         <Route path="/manageposts" element={<ManagePosts />} /> 
+        <Route path="/createproduct" element={<CreateProduct isAuth={isAuth} />} />
       </Routes>
     </Router>
   );

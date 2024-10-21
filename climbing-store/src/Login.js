@@ -23,7 +23,7 @@ function Login({ setIsAuth }) {
         await setDoc(doc(db, "users", userUID), {
           uid: user.uid,
           email: user.email,
-          displayName: user.displayName,
+          displayName: user.email, // Use email as displayName
           role: 'user' // Default role
         });
       }
@@ -38,6 +38,8 @@ function Login({ setIsAuth }) {
 
       setIsAuth(true);
       navigate('/');
+    }).catch((error) => {
+      console.error("Error signing in with Google: ", error);
     });
   };
 
