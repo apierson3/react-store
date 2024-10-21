@@ -1,11 +1,14 @@
 import React, { useEffect, useState } from 'react';
-import { collection, query, orderBy, getDocs } from "firebase/firestore";
-import { Link, useNavigate } from 'react-router-dom';
+import { collection, query, orderBy, getDocs, deleteDoc, doc } from "firebase/firestore";
+import { useNavigate } from 'react-router-dom';
 import { db } from './firebase-config';
+import ConfirmDeleteModal from './ConfirmDeleteModal'; // Import the modal
 import './ManagePosts.css';
 
 function ManagePosts() {
   const [posts, setPosts] = useState([]);
+  const [selectedPostId, setSelectedPostId] = useState(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -25,6 +28,17 @@ function ManagePosts() {
     navigate(`/editpost/${postId}`);
   };
 
+  const handleDeleteClick = (postId) => {
+    setSelectedPostId(postId);
+    setIsModalOpen(true);
+  };
+
+  const handleConfirmDelete = async () => {
+    await deleteDoc(doc(db, "posts", selectedPostId));
+    setPosts(posts.filter(post => post.id !== selectedPostId));
+    setIsModalOpen(false);
+  };
+
   return (
     <div className='manageposts-container'>
       <h2 className='manageposts-title'>Manage Posts</h2>
@@ -32,8 +46,14 @@ function ManagePosts() {
         <div key={post.id} className='manageposts-post'>
           <h3 className='manageposts-title'>{post.Title}</h3>
           <button className='manageposts-button' onClick={() => handleEditClick(post.id)}>Edit Post</button>
+          <button className='manageposts-delete-button' onClick={() => handleDeleteClick(post.id)}>Delete Post</button>
         </div>
       ))}
+      <ConfirmDeleteModal
+        isOpen={isModalOpen}
+        onRequestClose={() => setIsModalOpen(false)}
+        onConfirm={handleConfirmDelete}
+      />
     </div>
   );
 }
