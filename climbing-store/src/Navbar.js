@@ -44,6 +44,7 @@ function Navbar({ isAuth, setIsAuth }) {
               </button>
               <div className="dropdown-content">
                 {isAdmin && <Link to="/createpost">Create a Post</Link>}
+                {isAdmin && <Link to="/manageposts">Edit a Post</Link>}
                 <Link to="/profile">
                   <FontAwesomeIcon icon={faUser} /> Profile
                 </Link>
