@@ -1,4 +1,4 @@
-.editpost-container {
+.manageposts-container {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -8,9 +8,12 @@
     margin-top: 20px;
     position: relative;
     z-index: 1; /* Ensures proper layering */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    backdrop-filter: blur(10px); /* Apply blur effect */
+    border-radius: 20px; /* Rounded corners */
 }
 
-.editpost-card {
+.manageposts-card {
     background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
     backdrop-filter: blur(10px); /* Apply blur effect */
     border-radius: 20px; /* Rounded corners */
@@ -21,33 +24,30 @@
     font-family: 'Roboto', sans-serif; /* Apply Roboto font */
 }
 
-.editpost-title {
+.manageposts-title {
     font-size: 2rem;
     margin-bottom: 1rem;
     color: white;
+    text-align: left; /* Center the title */
 }
 
-.editpost-input,
-.editpost-textarea {
-    width: 100%;
-    padding: 10px;
+.manageposts-post {
+    width: 100%; /* Adjust width as needed */
+    margin-bottom: 20px; /* Add some space between posts */
+    text-align: left; /* Left align the post content */
+    justify-content: left;
+}
+
+.manageposts-post-title {
+    font-size: 1.5rem;
     margin-bottom: 1rem;
-    border: none;
-    border-radius: 5px;
-    font-size: 1rem;
-    font-family: 'Roboto', sans-serif;
+    color: white;
+    font-family: 'Roboto', sans-serif; /* Apply Roboto font */
+    text-align: left; /* Left align the post content */
 }
 
-.editpost-input {
-    height: 40px;
-}
-
-.editpost-textarea {
-    height: 200px;
-    resize: none;
-}
-
-.editpost-button {
+.manageposts-button,
+.manageposts-delete-button {
     padding: 0.5rem 1rem;
     font-size: 1rem;
     color: white;
@@ -56,13 +56,46 @@
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    margin-left: 10px; /* Add some space between buttons */
 }
 
-.editpost-button:hover {
+.manageposts-delete-button {
+    background-color: #ff4d4d; /* Red for delete button */
+}
+
+.manageposts-button:hover {
     background-color: #0056b3;
 }
 
-.editpost-loading {
-    font-size: 1.2rem;
-    color: white;
-} 
+.manageposts-delete-button:hover {
+    background-color: #ff1a1a;
+}
+
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.popup-inner {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.popup-button {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    margin: 0 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
