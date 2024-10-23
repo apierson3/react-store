@@ -16,7 +16,7 @@ import EditPost from "./EditPost";
 import CreateProduct from "./CreateProduct";
  
 function App() {
-  const [isAuth, setIsAuth] = useState(localStorage.getItem("isAuth"));
+  const [isAuth, setIsAuth] = useState(localStorage.getItem("isAuth") === "true");
 
   return (
     <Router>
@@ -29,10 +29,10 @@ function App() {
         <Route path="/createpost" element={<CreatePost isAuth={isAuth} />} />
         <Route path="/posts" element={<Posts isAuth={isAuth} />} />
         <Route path="/login" element={<Login setIsAuth={setIsAuth}/>}/>
-        <Route path="/post/:postId" element={<BlogPost />} />
-        <Route path="*" element={<Home />} /> {/* Catch-all route */}
-        <Route path="/editpost/:postId" element={<EditPost  />} />
-        <Route path="/manageposts" element={<ManagePosts />} /> 
+        <Route path="/post/:postId" element={<BlogPost isAuth={isAuth} />} />
+        <Route path="*" element={<Home isAuth={isAuth} />} /> {/* Catch-all route */}
+        <Route path="/editpost/:postId" element={<EditPost  isAuth={isAuth} />} />
+        <Route path="/manageposts" element={<ManagePosts isAuth={isAuth} />} /> 
         <Route path="/createproduct" element={<CreateProduct isAuth={isAuth} />} />
       </Routes>
     </Router>

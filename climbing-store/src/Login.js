@@ -13,7 +13,7 @@ function Login({ setIsAuth }) {
     signInWithPopup(auth, provider).then(async (result) => {
       const user = result.user;
       const userUID = user.uid;
-      localStorage.setItem("isAuth", true);
+      localStorage.setItem("isAuth", "true"); // Ensure this is a string
 
       // Check if user exists in Firestore
       const userDoc = await getDoc(doc(db, "users", userUID));
@@ -31,9 +31,9 @@ function Login({ setIsAuth }) {
       // Fetch user role from Firestore
       const userRole = userDoc.exists() ? userDoc.data().role : 'user';
       if (userRole === 'admin') {
-        localStorage.setItem("isAdmin", true);
+        localStorage.setItem("isAdmin", "true"); // Ensure this is a string
       } else {
-        localStorage.setItem("isAdmin", false);
+        localStorage.setItem("isAdmin", "false"); // Ensure this is a string
       }
 
       setIsAuth(true);
