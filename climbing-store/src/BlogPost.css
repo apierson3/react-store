@@ -57,7 +57,7 @@
     padding-bottom: 56.25%;
     position: relative;
     height: 0;
-    width: 80%; /* Reduce width for a smaller video */
+    width: 60%; /* Reduce width to 3/4 of the previous 80% */
     margin: 0 auto; /* Center the video */
   }
   
