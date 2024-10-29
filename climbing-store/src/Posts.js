@@ -29,7 +29,7 @@ function Posts() {
             <h3 className='posts-title'>
               <Link to={`/post/${post.id}`}>{post.Title}</Link>
             </h3>
-            <p className='posts-body'>{post.Body}</p>
+            <p className='posts-body'>{post.Body.substring(0,100)} ... </p>
           </div>
         ))}
       </div>
