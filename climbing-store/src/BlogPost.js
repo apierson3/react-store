@@ -33,27 +33,29 @@ function BlogPost() {
 
   return (
     <div className='blogpost-container'>
-      {post ? (
-        <>
-          <h2 className='blogpost-title'>{post.Title}</h2>
-          <p className='blogpost-body'>{post.Body}</p>
-          {post.youtubeLink && (
-            <div className="video-responsive">
-              <iframe
-                width="560"
-                height="315"
-                src={`https://www.youtube.com/embed/${extractVideoId(post.youtubeLink)}`}
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-                title="Embedded YouTube"
-              ></iframe>
-            </div>
-          )}
-        </>
-      ) : (
-        <p>Loading...</p>
-      )}
+      <div className='blogpost-card'>
+        {post ? (
+          <>
+            <h2 className='blogpost-title'>{post.Title}</h2>
+            <p className='blogpost-body'>{post.Body}</p>
+            {post.youtubeLink && (
+              <div className="video-responsive">
+                <iframe
+                  width="560"
+                  height="315"
+                  src={`https://www.youtube.com/embed/${extractVideoId(post.youtubeLink)}`}
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  title="Embedded YouTube"
+                ></iframe>
+              </div>
+            )}
+          </>
+        ) : (
+          <p>Loading...</p>
+        )}
+      </div>
     </div>
   );
 }
