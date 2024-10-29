@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { addDoc, collection, serverTimestamp } from "firebase/firestore";
+import { addDoc, collection, serverTimestamp } from "firebase/firestore"; 
 import { db, auth } from "./firebase-config";
 import { useNavigate } from "react-router-dom";
 import './CreatePost.css'; // Import the CSS file
@@ -7,7 +7,7 @@ import './CreatePost.css'; // Import the CSS file
 function CreatePost({ isAuth }) {
   const [Title, setTitle] = useState("");
   const [Body, setPostText] = useState("");
-
+  const [youtubeLink, setYoutubeLink] = useState("");
   const postsCollectionRef = collection(db, "posts");
   let navigate = useNavigate();
 
@@ -15,8 +15,9 @@ function CreatePost({ isAuth }) {
     await addDoc(postsCollectionRef, {
       Title,
       Body,
+      youtubeLink,
       Author: { name: auth.currentUser.displayName, id: auth.currentUser.uid },
-      CreatedAt: serverTimestamp() 
+      CreatedAt: serverTimestamp()
     });
     navigate("/");
   };
@@ -47,6 +48,15 @@ function CreatePost({ isAuth }) {
               placeholder="Post..."
               onChange={(event) => {
                 setPostText(event.target.value);
+              }}
+            />
+          </div>
+          <div className="inputGp">
+            <label> YouTube Link:</label>
+            <input
+              placeholder="YouTube Link..."
+              onChange={(event) => {
+                setYoutubeLink(event.target.value);
               }}
             />
           </div>
