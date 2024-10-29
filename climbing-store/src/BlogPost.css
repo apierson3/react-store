@@ -3,12 +3,13 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 100%;
-    padding: 20px;
+    width: calc(100% - 40px); /* Adjust the width to fit the screen considering padding */
+    padding: 20px 20px 20px 20px; /* Top, Right, Bottom, Left padding */
     margin-top: 20px;
     position: relative;
     z-index: 1; /* Lower than dropdown's z-index */
   }
+  
   
   .blogpost-card {
     background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
