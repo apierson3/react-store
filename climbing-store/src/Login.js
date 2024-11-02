@@ -109,7 +109,7 @@ function Login({ setIsAuth }) {
 
   return (
     <div className="loginPage">
-      <p>Sign In With Google to Continue</p>
+      <p></p>
       <button className="gsi-material-button" onClick={signInWithGoogle}>
         <div className="gsi-material-button-state"></div>
         <div className="gsi-material-button-content-wrapper">
@@ -123,7 +123,7 @@ function Login({ setIsAuth }) {
             </svg>
           </div>
           <span className="gsi-material-button-contents">Sign in with Google</span>
-          <span style={{ display: 'none' }}></span>
+          <span style={{ display: 'none' }}>Sign in with Google</span>
         </div>
       </button>
   
