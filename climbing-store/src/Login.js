@@ -127,7 +127,6 @@ function Login({ setIsAuth }) {
         </div>
       </button>
   
-      <p>Sign In With Email to Continue</p>
       <button className="gsi-material-button" onClick={() => setShowEmailForm(true)}>
         <div className="gsi-material-button-state"></div>
         <div className="gsi-material-button-content-wrapper">
@@ -141,7 +140,6 @@ function Login({ setIsAuth }) {
         </div>
       </button>
   
-      <p>Create an Account</p>
       <button className="gsi-material-button" onClick={() => setShowCreateAccountForm(true)}>
         <div className="gsi-material-button-state"></div>
         <div className="gsi-material-button-content-wrapper">
@@ -150,8 +148,8 @@ function Login({ setIsAuth }) {
               <path fill="#4285F4" d="M24 0C10.75 0 0 10.75 0 24s10.75 24 24 24 24-10.75 24-24S37.25 0 24 0zm0 36c-6.6 0-12-5.4-12-12s5.4-12 12-12 12 5.4 12 12-5.4 12-12 12zm0-22c-5.5 0-10 4.5-10 10s4.5 10 10 10 10-4.5 10-10-4.5-10-10-10z"></path>
             </svg>
           </div>
-          <span className="gsi-material-button-contents">Create Account</span>
-          <span style={{ display: 'none' }}>Create Account</span>
+          <span className="gsi-material-button-contents">Create an Account</span>
+          <span style={{ display: 'none' }}>Create an Account</span>
         </div>
       </button>
   
