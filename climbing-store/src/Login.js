@@ -126,7 +126,8 @@ function Login({ setIsAuth }) {
           <span style={{ display: 'none' }}>Sign in with Google</span>
         </div>
       </button>
-  
+
+      <p></p>
       <button className="gsi-material-button" onClick={() => setShowEmailForm(true)}>
         <div className="gsi-material-button-state"></div>
         <div className="gsi-material-button-content-wrapper">
@@ -139,7 +140,8 @@ function Login({ setIsAuth }) {
           <span style={{ display: 'none' }}>Sign in with Email</span>
         </div>
       </button>
-  
+
+      <p></p>
       <button className="gsi-material-button" onClick={() => setShowCreateAccountForm(true)}>
         <div className="gsi-material-button-state"></div>
         <div className="gsi-material-button-content-wrapper">
