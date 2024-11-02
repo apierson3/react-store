@@ -125,6 +125,20 @@ function Login({ setIsAuth }) {
         </div>
       </button>
 
+      <p>Create an Account</p>
+      <button className="gsi-material-button" onClick={() => setNewAccount(true)}>
+        <div className="gsi-material-button-state"></div>
+        <div className="gsi-material-button-content-wrapper">
+          <div className="gsi-material-button-icon">
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" style={{ display: 'block' }}>
+              <path fill="#4285F4" d="M24 0C10.75 0 0 10.75 0 24s10.75 24 24 24 24-10.75 24-24S37.25 0 24 0zm0 36c-6.6 0-12-5.4-12-12s5.4-12 12-12 12 5.4 12 12-5.4 12-12 12zm0-22c-5.5 0-10 4.5-10 10s4.5 10 10 10 10-4.5 10-10-4.5-10-10-10z"></path>
+            </svg>
+          </div>
+          <span className="gsi-material-button-contents">Create Account</span>
+          <span style={{ display: 'none' }}>Create Account</span>
+        </div>
+      </button>
+
       {showEmailForm && (
         <div className="popup">
           <form onSubmit={handleEmailSignIn}>
