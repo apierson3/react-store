@@ -115,9 +115,6 @@ function Login({ setIsAuth }) {
           <div className="gsi-material-button-icon">
             <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" style={{ display: 'block' }}>
               <path fill="#4285F4" d="M24 0C10.75 0 0 10.75 0 24s10.75 24 24 24 24-10.75 24-24S37.25 0 24 0zm0 36c-6.6 0-12-5.4-12-12s5.4-12 12-12 12 5.4 12 12-5.4 12-12 12zm0-22c-5.5 0-10 4.5-10 10s4.5 10 10 10 10-4.5 10-10-4.5-10-10-10z"></path>
-              <path fill="#FBBC05" d="M24 28.5c-2.48 0-4.5-2.02-4.5-4.5s2.02-4.5 4.5-4.5 4.5 2.02 4.5 4.5-2.02 4.5-4.5 4.5z"></path>
-              <path fill="#EA4335" d="M24 28.5c-2.48 0-4.5-2.02-4.5-4.5s2.02-4.5 4.5-4.5 4.5 2.02 4.5 4.5-2.02 4.5-4.5 4.5z"></path>
-              <path fill="#34A853" d="M24 28.5c-2.48 0-4.5-2.02-4.5-4.5s2.02-4.5 4.5-4.5 4.5 2.02 4.5 4.5-2.02 4.5-4.5 4.5z"></path>
             </svg>
           </div>
           <span className="gsi-material-button-contents">Sign in with Email</span>
@@ -169,5 +166,6 @@ function Login({ setIsAuth }) {
     </div>
   );
 }
+
 
 export default Login;
