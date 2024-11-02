@@ -2,15 +2,20 @@
 .loginPage {
     display: flex;
     flex-direction: column;
-    align-items: flex-start; /* Align items to the top */
-    margin-top: 20px;
-    justify-content: center;
-    height: 25vh;
+    align-items: center;
+    justify-content: center; /* Center both horizontally and vertically */
+    width: 25%; /* Make the width 25% of the viewport */
+    height: 25vh; /* Make the height 25% of the viewport */
     background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
     backdrop-filter: blur(10px); /* Apply blur effect */
     border-radius: 20px; /* Rounded corners */
     padding: 20px; /* Add some padding */
-  }
+    margin: auto; /* Center horizontally */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the element perfectly */
+  }  
   
   .gsi-material-button {
     -moz-user-select: none;
