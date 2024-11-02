@@ -12,7 +12,6 @@
     -ms-user-select: none;
     -webkit-appearance: none;
     /* background-color: rgba(233, 217, 217, 0.37); */
-    background-image: none;
     border: 1px solid #747775;
     -webkit-border-radius: 20px;
     border-radius: 20px;
@@ -82,7 +81,6 @@
   
   .gsi-material-button:disabled {
     cursor: default;
-    background-color: #ffffff61;
     border-color: #1f1f1f1f;
   }
   
