@@ -107,7 +107,7 @@ function Login({ setIsAuth }) {
           <span style={{ display: 'none' }}>Sign in with Google</span>
         </div>
       </button>
-
+  
       <p>Sign In With Email to Continue</p>
       <button className="gsi-material-button" onClick={() => setShowEmailForm(true)}>
         <div className="gsi-material-button-state"></div>
@@ -121,9 +121,9 @@ function Login({ setIsAuth }) {
           <span style={{ display: 'none' }}>Sign in with Email</span>
         </div>
       </button>
-
+  
       <p>Create an Account</p>
-      <button className="gsi-material-button" onClick={() => setNewAccount(true)}>
+      <button className="gsi-material-button" onClick={() => setShowCreateAccountForm(true)}>
         <div className="gsi-material-button-state"></div>
         <div className="gsi-material-button-content-wrapper">
           <div className="gsi-material-button-icon">
@@ -135,7 +135,7 @@ function Login({ setIsAuth }) {
           <span style={{ display: 'none' }}>Create Account</span>
         </div>
       </button>
-
+  
       {showEmailForm && (
         <div className="popup">
           <form onSubmit={handleEmailSignIn}>
@@ -154,18 +154,40 @@ function Login({ setIsAuth }) {
               required
             />
             <button type="submit">
-              {newAccount ? 'Create Account' : 'Sign In'}
+              Sign In
             </button>
           </form>
-          <p onClick={() => setNewAccount(!newAccount)}>
-            {newAccount ? 'Already have an account? Sign In' : 'Create new account'}
-          </p>
           <button onClick={() => setShowEmailForm(false)}>Close</button>
+        </div>
+      )}
+  
+      {showCreateAccountForm && (
+        <div className="popup">
+          <form onSubmit={handleEmailSignIn}>
+            <input
+              type="email"
+              placeholder="Email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+            />
+            <input
+              type="password"
+              placeholder="Password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              required
+            />
+            <button type="submit">
+              Create Account
+            </button>
+          </form>
+          <button onClick={() => setShowCreateAccountForm(false)}>Close</button>
         </div>
       )}
     </div>
   );
-}
+}  
 
 
 export default Login;
