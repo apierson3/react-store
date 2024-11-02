@@ -182,28 +182,29 @@ function Login({ setIsAuth }) {
   
       {showCreateAccountForm && (
         <div className="popup">
-          <form onSubmit={handleEmailSignIn}>
-            <input
-              type="email"
-              placeholder="Email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              required
-            />
-            <input
-              type="password"
-              placeholder="Password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              required
-            />
-            <button type="submit">
-              Create Account
-            </button>
-          </form>
-          <button onClick={() => setShowCreateAccountForm(false)}>Close</button>
+            <form onSubmit={handleCreateAccount}>
+                <input
+                    type="email"
+                    placeholder="Email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    required
+                />
+                <input
+                    type="password"
+                    placeholder="Password"
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                    required
+                />
+                <button type="submit">
+                    Create Account
+                </button>
+            </form>
+            <button onClick={() => setShowCreateAccountForm(false)}>Close</button>
         </div>
       )}
+
     </div>
   );
 }  

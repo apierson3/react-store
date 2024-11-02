@@ -113,21 +113,22 @@
   
   .popup {
     position: fixed;
-    align-items: center;
-    justify-content: center;
-    margin-top: 20px;
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust to truly center */
+    margin: 0; /* Ensure no margins are applied */
     padding: 20px;
-    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent background */
+    background-color: rgba(255, 255, 255, 0.9);
     border: 1px solid #747775;
     border-radius: 20px;
     box-shadow: 0 1px 2px 0 rgba(60, 64, 67, .30), 0 1px 3px 1px rgba(60, 64, 67, .15);
     z-index: 1000;
     width: 80%;
     max-width: 400px;
-    margin: 0; /* Ensure no margins are applied */
-    padding: 20px;
     box-sizing: border-box;
-  }
+    overflow-y: auto; /* Allow scrolling if content exceeds popup height */
+    max-height: 80vh; /* Limit height to avoid overflowing the viewport */
+    }
   
   .popup input {
     display: block;
