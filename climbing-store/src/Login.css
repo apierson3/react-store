@@ -1,9 +1,15 @@
+
 .loginPage {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start; /* Align items to the top */
+    margin-top: 20px;
     justify-content: center;
     height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    backdrop-filter: blur(10px); /* Apply blur effect */
+    border-radius: 20px; /* Rounded corners */
+    padding: 20px; /* Add some padding */
   }
   
   .gsi-material-button {
