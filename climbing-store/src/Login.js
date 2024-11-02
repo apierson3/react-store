@@ -12,7 +12,7 @@ function Login({ setIsAuth }) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [newAccount, setNewAccount] = useState(false);
-  const [showEmailForm, setShowEmailForm] = useState(false);
+  const [showEmailForm, setShowEmailForm] = useState(false); // Add this state
 
   const signInWithGoogle = () => {
     signInWithPopup(auth, provider).then(async (result) => {
