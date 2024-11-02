@@ -12,6 +12,7 @@ function Login({ setIsAuth }) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [newAccount, setNewAccount] = useState(false);
+  const [showEmailForm, setShowEmailForm] = useState(false);
 
   const signInWithGoogle = () => {
     signInWithPopup(auth, provider).then(async (result) => {
@@ -81,6 +82,7 @@ function Login({ setIsAuth }) {
 
       setIsAuth(true);
       navigate('/');
+      setShowEmailForm(false); // Hide email form after successful sign-in
     } catch (error) {
       console.error("Error with email/password authentication: ", error);
     }
