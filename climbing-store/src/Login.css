@@ -124,6 +124,9 @@
     z-index: 1000;
     width: 80%;
     max-width: 400px;
+    margin: 0; /* Ensure no margins are applied */
+    padding: 20px;
+    box-sizing: border-box;
   }
   
   .popup input {
