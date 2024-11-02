@@ -12,6 +12,7 @@ function Login({ setIsAuth }) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [newAccount, setNewAccount] = useState(false);
+  const [showPopup, setShowPopup] = useState(false);
 
   const signInWithGoogle = () => {
     signInWithPopup(auth, provider).then(async (result) => {
@@ -81,6 +82,7 @@ function Login({ setIsAuth }) {
 
       setIsAuth(true);
       navigate('/');
+      setShowPopup(false); // Hide popup after successful sign-in
     } catch (error) {
       console.error("Error with email/password authentication: ", error);
     }
@@ -105,29 +107,36 @@ function Login({ setIsAuth }) {
           <span style={{ display: 'none' }}>Sign in with Google</span>
         </div>
       </button>
-      <hr />
-      <form onSubmit={handleEmailSignIn}>
-        <input
-          type="email"
-          placeholder="Email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          required
-        />
-        <input
-          type="password"
-          placeholder="Password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          required
-        />
-        <button type="submit">
-          {newAccount ? 'Create Account' : 'Sign In'}
-        </button>
-      </form>
-      <p onClick={() => setNewAccount(!newAccount)}>
-        {newAccount ? 'Already have an account? Sign In' : 'Create new account'}
-      </p>
+
+      <p onClick={() => setShowPopup(true)}>Or sign in with email</p>
+
+      {showPopup && (
+        <div className="popup">
+          <form onSubmit={handleEmailSignIn}>
+            <input
+              type="email"
+              placeholder="Email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+            />
+            <input
+              type="password"
+              placeholder="Password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              required
+            />
+            <button type="submit">
+              {newAccount ? 'Create Account' : 'Sign In'}
+            </button>
+          </form>
+          <p onClick={() => setNewAccount(!newAccount)}>
+            {newAccount ? 'Already have an account? Sign In' : 'Create new account'}
+          </p>
+          <button onClick={() => setShowPopup(false)}>Close</button>
+        </div>
+      )}
     </div>
   );
 }
