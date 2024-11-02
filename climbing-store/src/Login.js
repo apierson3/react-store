@@ -11,8 +11,8 @@ function Login({ setIsAuth }) {
   let navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [newAccount, setNewAccount] = useState(false);
-  const [showEmailForm, setShowEmailForm] = useState(false); // Add this state
+  const [showEmailForm, setShowEmailForm] = useState(false);
+  const [showCreateAccountForm, setShowCreateAccountForm] = useState(false);
 
   const signInWithGoogle = () => {
     signInWithPopup(auth, provider).then(async (result) => {
@@ -50,12 +50,7 @@ function Login({ setIsAuth }) {
   const handleEmailSignIn = async (event) => {
     event.preventDefault();
     try {
-      let userCredential;
-      if (newAccount) {
-        userCredential = await createUserWithEmailAndPassword(auth, email, password);
-      } else {
-        userCredential = await signInWithEmailAndPassword(auth, email, password);
-      }
+      const userCredential = await signInWithEmailAndPassword(auth, email, password);
       const user = userCredential.user;
       const userUID = user.uid;
       localStorage.setItem("isAuth", "true");
@@ -85,6 +80,30 @@ function Login({ setIsAuth }) {
       setShowEmailForm(false); // Hide email form after successful sign-in
     } catch (error) {
       console.error("Error with email/password authentication: ", error);
+    }
+  };
+
+  const handleCreateAccount = async (event) => {
+    event.preventDefault();
+    try {
+      const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+      const user = userCredential.user;
+      const userUID = user.uid;
+      localStorage.setItem("isAuth", "true");
+
+      // Add new user to Firestore
+      await setDoc(doc(db, "users", userUID), {
+        uid: user.uid,
+        email: user.email,
+        displayName: user.email, // Use email as displayName
+        role: 'user' // Default role
+      });
+
+      setIsAuth(true);
+      navigate('/');
+      setShowCreateAccountForm(false); // Hide create account form after successful account creation
+    } catch (error) {
+      console.error("Error creating account: ", error);
     }
   };
 
