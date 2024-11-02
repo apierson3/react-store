@@ -112,23 +112,23 @@
   }
   
   .popup {
-    position: fixed;
-    top: 50%; /* Center vertically */
-    left: 50%; /* Center horizontally */
-    transform: translate(-50%, -50%); /* Adjust to truly center */
-    margin: 0; /* Ensure no margins are applied */
+    position: fixed !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
     padding: 20px;
-    background-color: rgba(255, 255, 255, 0.9);
-    border: 1px solid #747775;
-    border-radius: 20px;
-    box-shadow: 0 1px 2px 0 rgba(60, 64, 67, .30), 0 1px 3px 1px rgba(60, 64, 67, .15);
-    z-index: 1000;
-    width: 80%;
-    max-width: 400px;
-    box-sizing: border-box;
-    overflow-y: auto; /* Allow scrolling if content exceeds popup height */
-    max-height: 80vh; /* Limit height to avoid overflowing the viewport */
-    }
+    background-color: rgba(255, 255, 255, 0.9) !important; /* Semi-transparent background */
+    border: 1px solid #747775 !important;
+    border-radius: 20px !important;
+    box-shadow: 0 1px 2px 0 rgba(60, 64, 67, .30) !important;
+    z-index: 1000 !important;
+    width: 80% !important;
+    max-width: 400px !important;
+    margin: 0 !important;
+    padding: 20px !important;
+    box-sizing: border-box !important;
+  }
+  
   
   .popup input {
     display: block;
