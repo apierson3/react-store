@@ -176,7 +176,7 @@ function Login({ setIsAuth }) {
               Sign In
             </button>
           </form>
-          <button onClick={() => setShowEmailForm(false)}>Close</button>
+          <button className="close-btn" onClick={() => setShowEmailForm(false)}>Close</button>
         </div>
       )}
   
@@ -201,7 +201,7 @@ function Login({ setIsAuth }) {
                     Create Account
                 </button>
             </form>
-            <button onClick={() => setShowCreateAccountForm(false)}>Close</button>
+            <button className="close-btn" onClick={() => setShowCreateAccountForm(false)}>Close</button>
         </div>
       )}
 

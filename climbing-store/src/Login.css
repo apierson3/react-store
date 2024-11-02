@@ -166,3 +166,15 @@
     background-color: #357ae8;
   }
   
+  .popup button.close-btn { 
+    margin-top: 20px; 
+    background-color: #f44336; 
+  } 
+  
+  .popup button:hover {
+    background-color: #357ae8; 
+  } 
+  
+  .popup button.close-btn:hover { 
+    background-color: #e53935; 
+  }
